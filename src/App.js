@@ -23,7 +23,7 @@ const App=()=>{
         </ul>
       </div>
     </nav>
-    <div className="mt-4 p-5 bg-primary text-white rounded">
+    <div className="mt-4 p-5  text-dark rounded">
     
     <Route path="/" exact component={Home}></Route>
     <Route path="/about" component={About}></Route>
