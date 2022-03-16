@@ -1,26 +1,37 @@
-import {BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
+import About from './Components/About'
+import Contact from './Components/Contact'
+import Home from './Components/Home'
 const App=()=>{
     return(
   <Router>
-      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <div class="container-fluid">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
+      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div className="container-fluid">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link className="nav-link active" to="/">MyAPP</Link>
           </li>
-         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+         <li className="nav-item">
+            <Link className="nav-link" to="/">Home</Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">About</Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+          <li className="nav-item">
+            <Link className="nav-link" to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
     </nav>
+    <div className="mt-4 p-5 bg-primary text-white rounded">
+    
+    <Route path="/" exact component={Home}></Route>
+    <Route path="/about" component={About}></Route>
+    <Route path="/contact" component={Contact}></Route>
+    
+    </div>
     </Router>
+
     )
 }
 
