@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import FeedbackBox from "./FeedbackBox"
+import FeedbackForm from "./FeedbackForm"
 
 const About=()=>{
     useEffect(
@@ -34,6 +35,7 @@ The design, written content, and visual or video elements together tell an impor
    {
        feedbacks.map((x)=><FeedbackBox key={x.id} feedback={x}></FeedbackBox>)
    }
+   <FeedbackForm></FeedbackForm>
         </div>
     )
 }
