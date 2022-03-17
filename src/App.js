@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import About from './Components/About'
 import Contact from './Components/Contact'
 import Home from './Components/Home'
+import './App.css';
 const App=()=>{
     return(
   <Router>
