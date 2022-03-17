@@ -1,4 +1,5 @@
 import axios from "axios"
+import { useState } from "react"
 
 const FeedbackForm =()=>{
 
@@ -7,14 +8,24 @@ const FeedbackForm =()=>{
     const [type,setType]=useState("")
     const [message,setMessage]=useState("")
 
-    const saveFeedback=()=>{
-        axios.post("http://localhost:4500/feedback",{
+    const saveFeedback=async ()=>{
+    try{
+         await   axios.post("http://localhost:4500/feedbacks",{
             id: Math.round(Math.random()*10000),
             name: name,
             email: email,
             type: type,
             message: message
         })
+        alert("feedback Stored")
+        setName("")
+        setEmail("")
+        setMessage("")
+    }
+    catch(e){
+        alert("Unable to store feedback")
+        
+    }
     }
 
     return(
