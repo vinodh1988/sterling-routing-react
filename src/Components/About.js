@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import DetailsAgain from "./DetailsMore"
 import FeedbackBox from "./FeedbackBox"
 import FeedbackForm from "./FeedbackForm"
 
@@ -22,6 +23,7 @@ const About=()=>{
         <div style={{overflow: "hidden",padding: "10px"}}>
            
            <h1>About us</h1>
+         <h3>Just check IT -</h3>  <DetailsAgain></DetailsAgain>
            <div className="mt-5 p-15  text-white bg-dark rounded">
            <p>The About Us page of your website is an essential source of information for all who want to know more about your business.
            </p>

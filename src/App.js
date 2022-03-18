@@ -3,6 +3,7 @@ import About from './Components/About'
 import Contact from './Components/Contact'
 import Home from './Components/Home'
 import './App.css';
+import Details from './Components/Details';
 const App=()=>{
     return(
   <Router>
@@ -21,6 +22,9 @@ const App=()=>{
           <li className="nav-item">
             <Link className="nav-link" to="/contact">Contact</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/details">Details</Link>
+          </li>
         </ul>
       </div>
     </nav>
@@ -29,6 +33,7 @@ const App=()=>{
     <Route path="/" exact component={Home}></Route>
     <Route path="/about" component={About}></Route>
     <Route path="/contact" component={Contact}></Route>
+    <Route path="/details" component={Details}></Route>
     
     </div>
     </Router>
